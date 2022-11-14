@@ -1,10 +1,10 @@
 <?php
 // 事件定义文件
 return [
-    'bind' => [
+    'bind'      => [
     ],
 
-    'listen' => [
+    'listen'    => [
         'AppInit'  => [],
         'HttpRun'  => [],
         'HttpEnd'  => [],
@@ -13,9 +13,5 @@ return [
     ],
 
     'subscribe' => [
-        \app\subscribe\SystemSubscribe::class,
-        \app\subscribe\GameSubscribe::class,
-        \app\subscribe\MemberSubscribe::class,
-        \app\subscribe\MerchantSubscribe::class
     ],
 ];

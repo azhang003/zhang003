@@ -2,16 +2,18 @@
 // +----------------------------------------------------------------------
 // | ThinkPHP [ WE CAN DO IT JUST THINK ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2006~2018 http://thinkphp.cn All rights reserved.
+// | Copyright (c) 2006~2019 http://thinkphp.cn All rights reserved.
 // +----------------------------------------------------------------------
 // | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
 // +----------------------------------------------------------------------
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
-use think\facade\Route;
+// $Id$
 
-Route::get('think', function () {
-    return 'hello,ThinkPHP6!';
-});
+if (is_file($_SERVER["DOCUMENT_ROOT"] . $_SERVER["SCRIPT_NAME"])) {
+    return false;
+} else {
+    $_SERVER["SCRIPT_FILENAME"] = __DIR__ . '/index.php';
 
-Route::get('hello/:name', 'index/hello');
+    require __DIR__ . "/index.php";
+}

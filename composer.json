@@ -1,66 +1,49 @@
 {
-  "name": "kaadon/kaadonbaseadmin",
-  "description": "基于ThinkPHP6.0和layui的快速开发的后台管理系统。",
-  "type": "project",
-  "keywords": [
-    "easyadmin",
-    "thinkphp",
-    "admin"
-  ],
-  "homepage": "http://easyadmin.99php.cn/",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "kaadon",
-      "email": "kaadon@gmail.com"
+    "name": "topthink/think",
+    "description": "the new thinkphp framework",
+    "type": "project",
+    "keywords": [
+        "framework",
+        "thinkphp",
+        "ORM"
+    ],
+    "homepage": "https://www.thinkphp.cn/",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "liu21st",
+            "email": "liu21st@gmail.com"
+        },
+        {
+            "name": "yunwuxin",
+            "email": "448901948@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.5",
+        "topthink/framework": "^6.1.0",
+        "topthink/think-orm": "^2.0",
+        "topthink/think-filesystem": "^1.0"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^4.2",
+        "topthink/think-trace": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "app"
+        },
+        "psr-0": {
+            "": "extend/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "@php think service:discover",
+            "@php think vendor:publish"
+        ]
     }
-  ],
-  "require": {
-    "php": ">=7.1.0",
-    "topthink/framework": "6.0.10",
-    "topthink/think-orm": "^2.0",
-    "topthink/think-multi-app": "^1.0",
-    "topthink/think-view": "^1.0",
-    "topthink/think-captcha": "^3.0",
-    "aliyuncs/oss-sdk-php": "^2.4",
-    "qcloud/cos-sdk-v5": "^2.0",
-    "qiniu/php-sdk": "^7.4",
-    "jianyan74/php-excel": "^1.0",
-    "zhongshaofa/thinkphp-log-trace": "^1.0",
-    "topthink/think-worker": "^3.0",
-    "topthink/think-queue": "3.0.7",
-    "alibabacloud/client": "^1.5",
-    "ext-curl": "*",
-    "ipinfo/ipinfo": "^2.3",
-    "workerman/phpsocket.io": "^1.1",
-    "topthink/think-swoole": "^4.0",
-    "topthink/think-migration": "^3.0"
-  },
-  "require-dev": {
-    "symfony/var-dumper": "^4.2",
-    "eaglewu/swoole-ide-helper": "dev-master",
-    "phpunit/phpunit": "^9.5"
-  },
-  "autoload": {
-    "psr-4": {
-      "app\\": "app",
-      "Kaadon\\Lock\\": "extend/kaadon/lock/src"
-    }
-  },
-  "config": {
-    "preferred-install": "dist",
-    "secure-http": false
-  },
-  "scripts": {
-    "post-autoload-dump": [
-      "@php think service:discover",
-      "@php think vendor:publish"
-    ]
-  },
-  "repositories": {
-    "packagist": {
-      "type": "composer",
-      "url": "https://packagist.org"
-    }
-  }
 }
