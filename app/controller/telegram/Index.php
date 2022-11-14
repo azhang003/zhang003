@@ -28,7 +28,7 @@ class Index extends BaseController
 //            'name'=>'required',
 //            'massage'=>'required'
 //        ]);
-        var_dump(45465464);
+        var_dump(45465464);exit();
         $text =  "<b>Name: </b>\n"
             . "$request->name\n"
             . "<b>Message: </b>\n"
