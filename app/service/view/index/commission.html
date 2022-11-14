@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap5 实例</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<div class="container mt-3">
+    {foreach $data as $key=>$vo }
+    <h2>{$key}</h2>
+    {if is_array($vo) }
+    <table class="table">
+        <tbody>
+        {foreach $vo as $keys => $vos }
+        <tr>
+            <td>
+                {if array_key_exists($keys,$keylabl) }
+                <p>{$keylabl[$keys]}</p>
+                {else /}
+                <p>{$keys}</p>
+                {/if}
+            </td>
+            <td>{$vos}</td>
+        </tr>
+        {/foreach}
+        </tbody>
+    </table>
+    {else /}
+    <p>{$vo}</p>
+    {/if}
+    {/foreach}
+</div>
+
+</body>
+</html>
