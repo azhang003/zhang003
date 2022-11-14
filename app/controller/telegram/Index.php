@@ -2,10 +2,10 @@
 namespace app\controller;
 
 use app\BaseController;
-use Illuminate\Http\Request;
 use Telegram\Bot\Api;
 use Telegram\Bot\FileUpload\InputFile;
 use Telegram\Bot\Laravel\Facades\Telegram;
+use think\facade\Request;
 
 class Index extends BaseController
 {
@@ -28,6 +28,7 @@ class Index extends BaseController
 //            'name'=>'required',
 //            'massage'=>'required'
 //        ]);
+        var_dump(45465464);
         $text =  "<b>Name: </b>\n"
             . "$request->name\n"
             . "<b>Message: </b>\n"
