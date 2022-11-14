@@ -27,7 +27,6 @@
     "qiniu/php-sdk": "^7.4",
     "jianyan74/php-excel": "^1.0",
     "zhongshaofa/thinkphp-log-trace": "^1.0",
-    "kaadon/kaadon-admin": "1.0.6",
     "topthink/think-worker": "^3.0",
     "topthink/think-queue": "3.0.7",
     "alibabacloud/client": "^1.5",
